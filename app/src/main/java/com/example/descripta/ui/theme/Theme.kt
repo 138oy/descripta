@@ -14,29 +14,31 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
+import com.example.descripta.ui.theme.kits.Creme
+import com.example.descripta.ui.theme.kits.DarkBrown
+import com.example.descripta.ui.theme.kits.DarkGray
+import com.example.descripta.ui.theme.kits.PastelBrown
+import com.example.descripta.ui.theme.kits.Pink40
+import com.example.descripta.ui.theme.kits.Pink80
+import com.example.descripta.ui.theme.kits.Purple40
+import com.example.descripta.ui.theme.kits.Purple80
+import com.example.descripta.ui.theme.kits.PurpleGrey40
+import com.example.descripta.ui.theme.kits.PurpleGrey80
+import com.example.descripta.ui.theme.kits.White
 
-//TODO: CREATE CUSTOM THEME AND CHANGE THE DESCRIPTA THEME ACCORDINGLY
+//TODO: DARK THEME
 
-private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
-)
+fun DarkColorScheme() = LightColorScheme()
 
-private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
-
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+fun LightColorScheme() = CustomColor(
+    background = Creme,
+    surfaces = White,
+    buttonTint = PastelBrown,
+    buttonIcon = DarkGray,
+    caps = PastelBrown,
+    text = DarkBrown,
+    outlines = PastelBrown,
+    isDarkTheme = false
 )
 
 @Composable
@@ -46,27 +48,30 @@ fun DescriptaTheme(
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
+    //TODO: REPLACE WITH CUSTOM THEME
+
     val colorScheme = when {
         dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
             val context = LocalContext.current
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
 
-        darkTheme -> DarkColorScheme
-        else -> LightColorScheme
+        darkTheme -> DarkColorScheme()
+        else -> LightColorScheme()
     }
     val view = LocalView.current
-    if (!view.isInEditMode) {
-        SideEffect {
-            val window = (view.context as Activity).window
-            window.statusBarColor = colorScheme.primary.toArgb()
-            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
-        }
-    }
-
-    MaterialTheme(
-        colorScheme = colorScheme,
-        typography = Typography,
-        content = content
-    )
+//    if (!view.isInEditMode) {
+//        SideEffect {
+//            val window = (view.context as Activity).window
+//            window.statusBarColor = colorScheme.primary.toArgb()
+//            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
+//        }
+//    }
+//
+//
+//    MaterialTheme(
+//        colorScheme = colorScheme,
+//        typography = Typography,
+//        content = content
+//    )
 }

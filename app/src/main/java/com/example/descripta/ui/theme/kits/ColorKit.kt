@@ -1,4 +1,4 @@
-package com.example.descripta.ui.theme
+package com.example.descripta.ui.theme.kits
 
 import androidx.compose.ui.graphics.Color
 import com.example.descripta.R

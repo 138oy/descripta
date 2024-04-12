@@ -6,6 +6,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
+import com.example.descripta.ui.theme.kits.DarkGray
 
 class CustomColor(
     background: Color,
@@ -15,6 +16,7 @@ class CustomColor(
     caps: Color,
     text: Color,
     secondaryText: Color? = DarkGray,
+    outlines: Color,
     isDarkTheme: Boolean,
 ) {
 
@@ -38,6 +40,9 @@ class CustomColor(
     var secondaryText by mutableStateOf(secondaryText)
         private set
 
+    var outlines by mutableStateOf(outlines)
+        private set
+
     var isDarkTheme by mutableStateOf(isDarkTheme)
         private set
 
@@ -49,6 +54,7 @@ class CustomColor(
         caps: Color = this.caps,
         text: Color = this.text,
         secondaryText: Color? = this.secondaryText,
+        outlines: Color = this.outlines,
         isDarkTheme: Boolean = this.isDarkTheme,
     ) = CustomColor(
         background = background,
@@ -58,6 +64,7 @@ class CustomColor(
         caps = caps,
         text = text,
         secondaryText = secondaryText,
+        outlines = outlines,
         isDarkTheme = isDarkTheme,
     )
 
@@ -69,8 +76,9 @@ class CustomColor(
         caps = other.caps
         text = other.text
         secondaryText = other.secondaryText
+        outlines = other.outlines
         isDarkTheme = other.isDarkTheme
     }
 }
 
-val LocalColors = staticCompositionLocalOf { lightColorScheme() }
+val LocalColors = staticCompositionLocalOf { LightColorScheme() }
