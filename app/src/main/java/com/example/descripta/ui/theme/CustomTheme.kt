@@ -20,10 +20,8 @@ object CustomTheme {
         @ReadOnlyComposable
         get() = LocalShapes.current
 
-    // TODO: ADD CUSTOM SPACES HERE
-
-//    val spaces: CustomSpaces
-//        @Composable
-//        @ReadOnlyComposable
-//        get() = LocalSpaces.current
+    val spaces: CustomSpace
+        @Composable
+        @ReadOnlyComposable
+        get() = LocalSpaces.current
 }
