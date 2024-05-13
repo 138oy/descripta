@@ -11,6 +11,12 @@ import com.example.descripta.ui.theme.kits.RobotoSlabFamily
 //TODO: THIS SHIT IS MESSY SO JUST ADD MORE AS YOU GO
 
 data class CustomTypography(
+    val default: TextStyle = TextStyle(
+        fontFamily = MontserratFamily,
+        fontWeight = FontWeight.Normal,
+        fontSize = 15.sp
+    ),
+
     val logo: TextStyle = TextStyle(
         fontFamily = AclonicaFamily,
         fontWeight = FontWeight.Normal,
@@ -29,11 +35,7 @@ data class CustomTypography(
         fontSize = 15.sp
     ),
 
-    val inputPlaceholder: TextStyle = TextStyle(
-        fontFamily = MontserratFamily,
-        fontWeight = FontWeight.Light,
-        fontSize = 10.sp
-    ),
+    val inputPlaceholder: TextStyle = default,
 
     val buttonText: TextStyle = TextStyle(
         fontFamily = MontserratFamily,

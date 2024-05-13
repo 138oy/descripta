@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Descripta</string>
+    <string name="app_title">descripta</string>
+    <string name="input_login_email_label">e-mail / логин :</string>
+    <string name="input_password_label">пароль :</string>
+    <string name="input_login_email_placeholder">введите логин или почту</string>
+    <string name="input_password_placeholder">введите пароль</string>
+    <string name="textbutton_signup">регистрация</string>
+    <string name="textbutton_signin">войти</string>
+    <string name="input_username_label">имя пользователя :</string>
+    <string name="input_username_placeholder">так вас будут знать пользователи</string>
+    <string name="input_email_label">e-mail :</string>
+    <string name="input_email_placeholder">введите адрес электронной почты</string>
+    <string name="input_login_placeholder">это будет вашим айди</string>
+    <string name="input_login_label">логин :</string>
+    <string name="textbutton_cancel">отмена</string>
+    <string name="textbutton_done">готово</string>
 </resources>

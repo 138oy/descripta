@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Descripta</string>
+    <string name="app_title">descripta</string>
+    <string name="input_login_email_label">e-mail / login :</string>
+    <string name="input_password_label">password :</string>
+    <string name="input_login_email_placeholder">enter your login or e-mail</string>
+    <string name="input_password_placeholder">enter your password</string>
+    <string name="textbutton_signup">sign up</string>
+    <string name="textbutton_signin">sign in</string>
+    <string name="input_username_label">username :</string>
+    <string name="input_username_placeholder">you will be known by this</string>
+    <string name="input_email_label">e-mail :</string>
+    <string name="input_email_placeholder">enter your e-mail</string>
+    <string name="input_login_placeholder">this will be your id</string>
+    <string name="input_login_label">login :</string>
+    <string name="textbutton_cancel">cancel</string>
+    <string name="textbutton_done">done</string>
+</resources>

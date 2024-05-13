@@ -11,6 +11,7 @@ data class CustomSpace(
     val smallDivider: Dp = 20.dp,
     val big: Dp = 25.dp,
     val bigDivider: Dp = 45.dp,
+    val indent: Dp = 55.dp,
 )
 
 val LocalSpaces = staticCompositionLocalOf { CustomSpace() }

@@ -1,12 +1,11 @@
 package com.example.descripta.ui.theme
 
-import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
-import com.example.descripta.ui.theme.kits.DarkGray
+import com.example.descripta.ui.theme.kits.LightGray
 
 class CustomColor(
     background: Color,
@@ -15,7 +14,7 @@ class CustomColor(
     buttonIcon: Color,
     caps: Color,
     text: Color,
-    secondaryText: Color? = DarkGray,
+    secondaryText: Color = LightGray,
     outlines: Color,
     isDarkTheme: Boolean,
 ) {
@@ -53,7 +52,7 @@ class CustomColor(
         buttonIcon: Color = this.buttonIcon,
         caps: Color = this.caps,
         text: Color = this.text,
-        secondaryText: Color? = this.secondaryText,
+        secondaryText: Color = this.secondaryText,
         outlines: Color = this.outlines,
         isDarkTheme: Boolean = this.isDarkTheme,
     ) = CustomColor(

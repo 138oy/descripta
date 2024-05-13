@@ -46,7 +46,9 @@ fun DescriptaTheme(
         LocalShapes provides shapes,
         LocalSpaces provides spaces,
     ) {
-        //TODO: CHANGE THE DEFAULT TEXT STYLE AS SOON AS IT IS CREATED
-        ProvideTextStyle(typography.logo.copy(color = CustomTheme.colors.text), content = content)
+        ProvideTextStyle(
+            typography.default.copy(color = CustomTheme.colors.text),
+            content = content
+        )
     }
 }
